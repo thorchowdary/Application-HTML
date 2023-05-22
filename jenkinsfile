@@ -16,7 +16,7 @@ pipeline {
                 aws s3 cp s3://ktkt07/package-$BUILD_NUMBER .
                 echo "donwloading package from s3"
                 unzip package-$BUILD_NUMBER.zip
-                cp * /var/www/html
+                cp -r * /var/www/html
             }
         }
     }
