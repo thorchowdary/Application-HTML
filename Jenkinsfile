@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build and store in s3') {
             steps {
-               zip package-$BUILD_NUMBER.zip *
+               zip -r package-$BUILD_NUMBER.zip *
                aws s3 cp package-$BUILD_NUMBER.zip s3://methorbucket
             }
         }
