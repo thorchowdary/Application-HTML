@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'ls -ltrh'
+               sh '/usr/local/bin/aws s3 ls'
             }
         }
         stage('Test') {
