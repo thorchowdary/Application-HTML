@@ -14,7 +14,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                
+                echo "deploy"
+                sh 'aws s3 ls'
+                echo $BUID_NUMBER
             }
         }
     }
